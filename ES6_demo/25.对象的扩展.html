@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>蒂花之秀王独秀</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+<script>
+    console.log(0 == -0);
+    console.log(NaN == NaN);
+    //Object.is(v1,v2); 底层使用字符串的形式进行比较的
+    console.log(Object.is(0, -0));
+    console.log(Object.is(NaN, NaN));
+
+    let obj = {};
+    let obj1 = {username: 'zhangsan', age: 27};
+    let obj2 = {sex: '男'}
+    Object.assign(obj, obj1, obj2);
+    console.log(obj);
+
+    let obj3 = {};
+    let obj4 = {qian:2000000};
+    obj3.__proto__= obj4;
+    console.log(obj3);
+    console.log(obj3.qian);
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>蒂花之秀王独秀</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+<script>
+    //创建promise对象
+    let promise = new Promise((resolve,reject)=>{
+        //初始化promise状态 pending状态
+        console.log("111");
+        //执行异步操作，通常是发送ajax请求，开启定时器
+        setTimeout(()=>{
+            console.log("333");
+            //根据异步任务的返回结果去修改promise的状态
+            //异步任务执行成功 修改promise的状态为 fullfilled ：成功的状态
+            //resolve("666");
+            //异步任务执行失败
+            reject("555");
+        },2000);
+    });
+    console.log("222");
+    promise
+        .then((data)=>{  //成功的回调
+            console.log(data,"成功了");
+        },(error)=>{  //失败的回调
+            console.log(error,"失败了");
+        });
+</script>
+</body>
+</html>

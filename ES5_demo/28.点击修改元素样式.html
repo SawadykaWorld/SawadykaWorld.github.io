@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>蒂花之秀王独秀</title>
+    <style>
+        .div1 {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<input type="button" value="按钮" id="btn" />
+<div id="div1" class="div1"></div>
+<script>
+    document.getElementById("btn").onclick = function () {
+        var divObj = document.getElementById("div1");
+        divObj.style.backgroundColor = "red";
+        divObj.style.display = "block";
+    }
+</script>
+</body>
+</html>

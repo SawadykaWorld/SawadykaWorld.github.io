@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>蒂花之秀王独秀</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+<script>
+    //1.调用系统的构造函数创建对象
+/*    var person = new Object();
+    person.name = "zhangsan";
+    person.age = 15;
+    person.eat = function () {
+        console.log("eat");
+    }
+    console.log(person);
+    person.eat();*/
+    //2.工厂模式创建对象（说白了就是封装一个创建对象的函数）
+    /*function createPerson(name, age) {
+        var person = new Object();
+        person.name = name;
+        person.age = age;
+        person.eat = function () {
+            console.log("eat");
+        }
+        return person;
+    }
+    var pr1 = createPerson("zhangsan",15);
+    var pr2 = createPerson("lisi",15);
+    console.log(pr1, pr2);
+    pr1.eat();
+    pr2.eat();*/
+    //3.自定义构造函数创建对象
+/*    function Person(name,age) {
+        this.name = name;
+        this.age = age;
+        this.eat = function () {
+            console.log("eat");
+        }
+    }
+    var pr1 = new Person("zhangsan",15);
+    var pr2 = new Person("lisi",17);
+    console.log(pr1, pr2);
+    pr1.eat();
+    pr2.eat();*/
+    //4.字面量的方式创建对象；
+/*    var pr1 = {
+        name:"zhangsan",
+        age:15,
+        eat:function () {
+            console.log("eat");
+        }
+    }
+    console.log(pr1);
+    pr1.eat();*/
+</script>
+
+</body>
+</html>

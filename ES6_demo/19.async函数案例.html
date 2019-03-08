@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>蒂花之秀王独秀</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<script src="jquery-1.12.4.js"></script>
+<script>
+    function getNews(url) {
+        return new Promise((resolve, reject) => {
+            $.ajax({
+                method:'GET',
+                url,
+                success: data=>resolve(data),
+                error: error=>reject(error)
+            })
+        })
+    }
+    
+    async function sendXml() {
+        let result = await getNews('url');
+        console.log(result);
+        result = await getNews('url'+result.commonUrls);
+        console.log(result);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>蒂花之秀王独秀</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+<script>
+    /*    //创建正则表达式对象
+     let reg = new RegExp(/\d{5}/);
+     let str = "我的电话号是10010";
+     //对象的test方法
+     let result = reg.test(str);
+     console.log(result);*/
+
+/*    //创建正则表达式对象
+    let reg = new RegExp(/\d{5}/);
+    //对象的test方法
+    console.log(reg.test("我的电话号是10010"));*/
+
+    //字面量的方式创建正则表达式对象
+    let reg = /\d{1,9}/;
+    let result =  reg.test("我的幸运数字是777");
+    console.log(result);
+</script>
+</body>
+</html>

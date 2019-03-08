@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>蒂花之秀王独秀</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+<script>
+    /*    let a =10;
+     const b =100;
+     console.log(a,b);
+     //let a = 11;不能重复声明
+     //const b = 101;
+     console.log(a, b);*/
+/*    var a1 = [];
+    for (var i = 0; i < 10; i++) {
+        a1[i]=function () {
+            console.log(i);
+        }
+    }
+    a1[6]();//10
+    var a2 = [];
+    for (let i = 0; i < 10; i++) {
+        a2[i]=function () {
+            console.log(i);
+        }
+    }
+    a2[6]();//6*/
+/*    for (let i = 0; i < 3; i++) {
+        let i = 'abc';
+        console.log(i);
+    }*/
+/*    for (var i = 0; i < 3; i++) {
+        var i = 'abc';
+        console.log(i);
+    }*/
+    // var 的情况
+/*    console.log(foo); // 输出undefined
+    var foo = 2;
+
+    // let 的情况
+    console.log(bar); // 报错ReferenceError
+    let bar = 2;*/
+/*    var tmp = 123;
+
+    if (true) {
+        tmp = 'abc'; // ReferenceError
+        let tmp;
+    }*/
+/*    if (true) {
+        // TDZ开始
+        tmp = 'abc'; // ReferenceError
+        console.log(tmp); // ReferenceError
+
+        let tmp; // TDZ结束
+        console.log(tmp); // undefined
+
+        tmp = 123;
+        console.log(tmp); // 123
+    }*/
+/*    typeof x; // ReferenceError
+    let x;*/
+/*    function bar(x = y, y = 2) {
+        return [x, y];
+    }
+
+    bar();*/
+/*    function bar(x = 2, y = x) {
+        return [x, y];
+    }
+    bar();*/
+
+</script>
+</body>
+</html>

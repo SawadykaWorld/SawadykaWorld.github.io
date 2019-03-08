@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>蒂花之秀王独秀</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<botton>测试1</botton>
+<br>
+<botton>测试2</botton>
+<br>
+<botton>测试3</botton>
+<script>
+    let btns = document.getElementsByTagName("botton");
+    Array.from(btns).forEach(function (item,index) {
+        console.log(item);
+    })
+
+    let arr = Array.of(1,2,4,'aaa',true);
+    console.log(arr);
+
+    let arr2 = [2,2,4,5,1,6,7,1,7,8];
+    let result = arr2.find(function (item,index) {
+        return item>4;
+    })
+    console.log(result);
+
+    let arr3 = [2,2,4,5,1,6,7,1,7,8];
+    let result1 = arr3.findIndex(function (item,index) {
+        return item>4;
+    })
+    console.log(result1);
+</script>
+</body>
+</html>

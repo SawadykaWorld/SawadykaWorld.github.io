@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>蒂花之秀王独秀</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<input>
+
+</input>
+<script>
+    //1.document.write
+    document.write("hahaha");
+    //2.父级对象.innerHTML="标签代码及内容";
+    document.getElementsByTagName("input").innerHTML = "<P>这是一个P</P>"
+    /*3. document.createElement("标签名字");得到的是一个对象,
+     父级元素.appendChild(子级元素对象);
+     父级元素.inerstBefore(新的子级对象,参照的子级对象);
+     移除子元素
+     父级元素.removeChild(要干掉的子级元素对象);*/
+/*  事件的绑定:为同一个元素绑定多个相同的事件
+    三种方式:
+     1. 对象.on事件名字=事件处理函数      如果是多个相同事件注册用这种方式,最后一个执行,之前的被覆盖了
+     my$("btn").onclick=function(){};
+     2. 对象.addEventListener("没有on的事件名字",事件处理函数,false);
+     my$("btn").addEventListener("click",function(){},false);
+     3. 对象.attachEvent("有on的事件名字",事件处理函数);
+     my$("btn").attachEvent("onclick",function(){});*/
+
+</script>
+</body>
+</html>

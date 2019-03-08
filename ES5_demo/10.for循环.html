@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>蒂花之秀王独秀</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+<script>
+    //控制行数的---正方形的5行5列
+    for (var i = 0; i < 5; i++) {
+        for (j = 0; j < 5; j++) {
+            document.write("★");
+        }
+        document.write("<br />");
+    }
+    //三角形
+    for (var i = 0; i <= 5; i++) {
+        //控制每一行有几个星星
+        for (var j = 0; j <= i; j++) {
+            document.write("★");
+        }
+        document.write("<br/>");
+    }
+    //99乘法表
+    for (var i = 1; i <= 9; i++) {
+        //控制每一行有几个星星
+        for (var j = 1; j <= i; j++) {
+            document.write(i+"*"+j+"="+i*j+" ");
+        }
+        document.write("<br/>");
+    }
+
+
+
+</script>
+</body>
+</html>

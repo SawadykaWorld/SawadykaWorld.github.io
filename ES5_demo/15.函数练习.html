@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>蒂花之秀王独秀</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+<script>
+    /*    //求两个数字中的最大值
+     function getMax(x, y) {
+     if (x > y) {
+     return x;
+     } else {
+     return y;
+     }
+     }
+     console.log(getMax(17,2)); */
+    //求一组数字中最大的值
+    function getArrayMax(array) {
+        //假设max中存的是最大的值
+        var max = array[0];
+        for (var i = 0; i < array.length; i++) {
+            if (max < array[i]) {
+                max = array[i];
+            }
+        }
+        return max;
+    }
+    var arr = [1, 2, 3, 4, 5, 6];
+    console.log(getArrayMax(arr));
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>蒂花之秀王独秀</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+<script>
+    function* myGenerator() {
+        console.log("执行了");
+        yield 'hello';
+        console.log("暂停，再次执行了");
+        yield 'world';
+        console.log("遍历完毕");
+        return '返回的结果';
+    }
+    let MG = myGenerator();
+    console.log(MG.next());
+    console.log(MG.next());
+    console.log(MG.next());
+</script>
+</body>
+</html>

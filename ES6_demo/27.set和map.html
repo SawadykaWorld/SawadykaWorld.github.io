@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>蒂花之秀王独秀</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+<script>
+    let set = new Set([1,2,3,2,3,19,5,6,1]);
+    console.log(set);
+    set.add(20);
+    console.log(set.size,set);
+    console.log(set.has(2));
+    console.log(set.has(8));
+    set.clear();
+    console.log(set);
+
+    let map = new Map([['123',23],[123,'hahah']]);
+    console.log(map);
+    map.set('asd',123);
+    console.log(map);
+    map.delete("asd");
+    console.log(map);
+</script>
+</body>
+</html>
