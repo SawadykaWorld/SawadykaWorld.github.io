@@ -1,0 +1,12 @@
+<mvc:View controllerName="HelloWorldNestView.controller.HelloPanel" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+	<App>
+		<pages>
+			<Page showHeader="false">
+				<content>
+					<Button text="sayNestHello" press="sayNestHello"></Button>
+				</content>               
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
