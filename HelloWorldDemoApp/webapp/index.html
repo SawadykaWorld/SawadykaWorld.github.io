@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
+        <script src="../../resources/sap-ui-core.js"
+                id="sap-ui-bootstrap"
+                data-sap-ui-libs="sap.m"
+                data-sap-ui-theme="sap_belize">
+        </script>
+        <!-- only load the mobile lib "sap.m" and the "sap_bluecrystal" theme -->
+
+        <script type="text/javascript">
+        	//监听核心库加载完毕的回调方法
+			sap.ui.getCore().attachInit(function(){
+				var app = new sap.m.App("MyApp",{
+					initialPage : "page1"
+				})
+
+                
+            	//page 1
+            	var page1 = new sap.m.Page("page1",{
+            		title:"Hello World",
+                	showNavButton: false,
+               		content: new sap.m.Button({
+              			text:"go to page2",
+               			press: function(){
+               				app.to("page2");
+               			}
+               		})
+            	});
+                
+        		//page2
+        		var page2 = new sap.m.Page("page2",{
+            	 	title:"Welcome to page2",
+            		showNavButton:true,
+            		navButtonPress: function(){
+            	  		app.back();
+            	 	}
+            	});
+                
+            	//添加page1和page2两个页面
+            	app.addPage(page1).addPage(page2);
+        	    //通过替换ID改变对应HTML的内容
+        	    app.placeAt("content");
+			});
+        </script>
+
+    </head>
+    <body class="sapUiBody" id="content">
+    </body>
+</html>
