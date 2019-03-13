@@ -1,0 +1,86 @@
+<mvc:View controllerName="ListDemoApp.controller.HelloWorld" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m" xmlns:core="sap.ui.core" height="100%">
+	<Page showHeader="true" title="this is my list demo view">
+		<content>
+			<!-- 
+			mode: list模式选择 有 Delete(删除) MultiSelect（多选） NoneDefault（禁止选择） SingleSelect（单选在右侧） SingleSelectLeft（单选在左侧） SingleSelectMaster（选中模式的单选有高亮效果）
+			
+			sap.m.ListMode.Delete Delete mode (only one list item can be deleted via provided delete button)
+			sap.m.ListMode.MultiSelect Multi selection mode (more than one list item can be selected).
+			sap.m.ListMode.NoneDefault mode (no selection).
+			sap.m.ListMode.SingleSelect Right-positioned single selection mode (only one list item can be selected).
+			sap.m.ListMode.SingleSelectLeft Left-positioned single selection mode (only one list item can be selected).
+			sap.m.ListMode.SingleSelectMaster Selected item is highlighted but no selection control is visible (only one list item can be selected).
+			
+			items:数据绑定
+			growing:开启growing
+			growingThreshold:显示4行
+			growingScrollToLoad:自动刷新加载数据
+			growingDirection:向下加载还是向上加载
+			
+			growingDirection="Upwards"
+			-->
+			<!--list头-->
+			<List headerText="my list" selectionChange="testChange" delete="testChange" mode="SingleSelectLeft" items="{path:'/PurchaseOrderCollection'}"
+				growing="true" growingThreshold="4" growingScrollToLoad="false" noDataText="No products found">
+				<headerToolbar>
+					<Toolbar>
+						<Title text="my list" level="H2"/>
+						<ToolbarSpacer/>
+						<Button icon="sap-icon://settings" press="handleButtonPress"/>
+						<Button icon="sap-icon://person-placeholder" press="handleButtonPress"/>
+						<Button icon="sap-icon://drop-down-list" press="handleButtonPress"/>
+					</Toolbar>
+				</headerToolbar>
+				<items>
+			<!--自定义布局list-->
+					<CustomListItem>
+			<!--布局盒子-->
+						<HBox>
+							<core:Icon size="2rem" src="sap-icon://attachment-photo" class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom"/>
+			<!--布局盒子-->
+							<VBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom">
+								<Link text="{ID}" target="{ProductId}" press="handlePress"/>
+								<Label text="{LifecycleStatusDesc}"/>
+							</VBox>
+						</HBox>
+					</CustomListItem>
+				</items>
+			<!--应用于移动设备的属性-->
+				<swipeContent>
+					<Button text="Delete Item" type="Reject" press="handleReject"/>
+				</swipeContent>
+			</List>
+			<!--  StandardList  -->
+			<!--<List id="list" mode="Delete" delete="handleDelete" enableBusyIndicator="true" headerText="Products" growing="true"-->
+			<!--	items="{ path: '/PurchaseOrderCollection' }">-->
+			<!--	<StandardListItem title="{ID}" description="{ProductId}" icon="{ProductPicUrl}" iconDensityAware="false" iconInset="false"/>-->
+			<!--</List>-->
+			<!--  ActionList 按钮形式的list -->
+			<!--<List id="list" mode="Delete" delete="handleDelete" enableBusyIndicator="true" headerText="actions" growing="true">-->
+			<!--	<ActionListItem text="Reject"/>-->
+			<!--	<ActionListItem text="Accept"/>-->
+			<!--	<ActionListItem text="Email"/>-->
+			<!--	<ActionListItem text="Forward"/>-->
+			<!--	<ActionListItem text="Delete"/>-->
+			<!--</List>-->
+			<!--  FeedList 信息展开 -->
+			<!--<List headerText="Feed Entries" items="{feedModel>/EntryCollection}">-->
+			<!--	<FeedListItem sender="{feedModel>Author}" icon="{feedModel>AuthorPicUrl}" senderPress="onPress" iconPress="onPress" iconDensityAware="false"-->
+			<!--		info="{feedModel>Type}" timestamp="{feedModel>Date}" text="{feedModel>Text}" convertLinksToAnchorTags="All"/>-->
+			<!--</List>-->
+			<!--  DisplayList  key和value对应的list  -->
+			<!--<List items="{/PurchaseOrderCollection}" headerText="Address">-->
+			<!--	<DisplayListItem label="{ID}" value="{ProductId}" type="Navigation"/>-->
+			<!--</List>-->
+			<!--  DisplayList  -->
+			<!--type: Active（可点击） InActive（不可点击） Navigation（导航） Detail-->
+			<!--<List binding="{/PurchaseOrderCollection/0}" headerText="Address">-->
+			<!--	<DisplayListItem label="Name" value="{ID}"/>-->
+			<!--	<DisplayListItem label="Street" value="{ID} {ID}"/>-->
+			<!--	<DisplayListItem label="City" value="{ID} {ID}" type="Navigation"/>-->
+			<!--	<DisplayListItem label="{ID}" value="{ProductId}" type="Active"/>-->
+			<!--</List>-->
+		</content>
+	</Page>
+</mvc:View>
